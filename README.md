@@ -78,9 +78,9 @@ cd Bearing-CLIP
 ```Bash
 
 python \-m venv venv  
-\# Windows  
+# Windows  
 venv\\Scripts\\activate  
-\# macOS / Linux  
+# macOS / Linux  
 source venv/bin/activate
 ```
 ### **3\. 安装依赖**
@@ -96,11 +96,11 @@ pip install \-r requirements.txt
 * 方法A: 设置Hugging Face镜像  
   在运行脚本的终端中，执行以下命令：  
   ```Bash  
-  \# Windows (CMD)  
+  # Windows (CMD)  
   set HF\_ENDPOINT=https://hf-mirror.com  
-  \# Windows (PowerShell)  
+  # Windows (PowerShell)  
   $env:HF\_ENDPOINT \= "https://hf-mirror.com"  
-  \# macOS / Linux  
+  # macOS / Linux  
   export HF\_ENDPOINT=https://hf-mirror.com
 
 * 方法B: 手动下载模型  
@@ -151,9 +151,9 @@ python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model.pt
 * **目的**: 验证残差适配器的有效性。  
 * **运行**: 分别评估在核心工作流中产出的两个模型。
   ```Bash  
-  \# 评估无适配器模型  
+  # 评估无适配器模型  
   python evaluate.py \--model\_path ./pretrained\_weights/zero\_shot\_model.pth \--save\_path ./results/no\_adapter  
-  \# 评估有适配器模型  
+  # 评估有适配器模型  
   python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model.pth \--save\_path ./results/with\_adapter
 
 * **分析**: 对比两个results文件夹中 `results/_no_adapter` 和 `results/_with_adapter` 的性能指标。
@@ -164,18 +164,18 @@ python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model.pt
 * **运行 (以完整提示词为例)**:  
   1. **训练并评估 DistilBERT**:  
      ```Bash  
-     \# 训练  
+     # 训练  
      python train.py \--mode zero\_shot \--text\_model\_name 'distilbert-base-uncased' \--prompt "A {} bearing" \--save\_suffix "\_distilbert\_simple"  
      python train.py \--mode adapter \--text\_model\_name 'distilbert-base-uncased' \--prompt "A {} bearing" \--save\_suffix "\_distilbert\_simple"  
-     \# 评估  
+     # 评估  
      python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model\_distilbert\_simple.pth \--text\_model\_name 'distilbert-base-uncased' \--save\_path ./results/distilbert\_simple\_with\_adapter
 
   2. **训练并评估 Qwen2**:  
      ```Bash  
-     \# 训练  
+     # 训练  
      python train.py \--mode zero\_shot \--text\_model\_name 'Qwen/Qwen2-1.5B-Base' \--prompt "A {} bearing" \--save\_suffix "\_qwen2\_simple"  
      python train.py \--mode adapter \--text\_model\_name 'Qwen/Qwen2-1.5B-Base' \--prompt "A {} bearing" \--save\_suffix "\_qwen2\_simple"  
-     \# 评估  
+     # 评估  
      python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model\_qwen2\_simple.pth \--text\_model\_name 'Qwen/Qwen2-1.5B-Base' \--save\_path ./results/qwen2\_simple\_with\_adapter
 
 * **分析**: 对比两个最终的评估结果，观察LLM带来的性能变化。
