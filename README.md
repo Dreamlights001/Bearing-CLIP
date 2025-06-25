@@ -161,20 +161,20 @@ python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model.pt
 ### **实验2: 文本编码器先进性对比 (DistilBERT vs. Qwen2)**
 
 * **目的**: 验证使用更先进的LLM是否能提升性能。  
-* **运行 (以简单提示词为例)**:  
+* **运行 (以完整提示词为例)**:  
   1. **训练并评估 DistilBERT**:  
      ```Bash  
      \# 训练  
-     python train.py \--mode zero\_shot \--text\_model\_name 'distilbert-base-uncased' \--prompt "{}" \--save\_suffix "\_distilbert\_simple"  
-     python train.py \--mode adapter \--text\_model\_name 'distilbert-base-uncased' \--prompt "{}" \--save\_suffix "\_distilbert\_simple"  
+     python train.py \--mode zero\_shot \--text\_model\_name 'distilbert-base-uncased' \--prompt "A {} bearing" \--save\_suffix "\_distilbert\_simple"  
+     python train.py \--mode adapter \--text\_model\_name 'distilbert-base-uncased' \--prompt "A {} bearing" \--save\_suffix "\_distilbert\_simple"  
      \# 评估  
      python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model\_distilbert\_simple.pth \--text\_model\_name 'distilbert-base-uncased' \--save\_path ./results/distilbert\_simple\_with\_adapter
 
   2. **训练并评估 Qwen2**:  
      ```Bash  
      \# 训练  
-     python train.py \--mode zero\_shot \--text\_model\_name 'Qwen/Qwen2-1.5B-Base' \--prompt "{}" \--save\_suffix "\_qwen2\_simple"  
-     python train.py \--mode adapter \--text\_model\_name 'Qwen/Qwen2-1.5B-Base' \--prompt "{}" \--save\_suffix "\_qwen2\_simple"  
+     python train.py \--mode zero\_shot \--text\_model\_name 'Qwen/Qwen2-1.5B-Base' \--prompt "A {} bearing" \--save\_suffix "\_qwen2\_simple"  
+     python train.py \--mode adapter \--text\_model\_name 'Qwen/Qwen2-1.5B-Base' \--prompt "A {} bearing" \--save\_suffix "\_qwen2\_simple"  
      \# 评估  
      python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model\_qwen2\_simple.pth \--text\_model\_name 'Qwen/Qwen2-1.5B-Base' \--save\_path ./results/qwen2\_simple\_with\_adapter
 
@@ -188,8 +188,8 @@ python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model.pt
 **训练和评估 (简单提示词)**:
 ```bash
 # 训练 (会自动保存为 ..._simple.pth)
-python train.py --mode zero_shot --text_model_name $model_name --prompt "A {} bearing" --save_suffix $save_suffix --epochs $epochs
-python train.py --mode adapter --text_model_name $model_name --prompt "A {} bearing" --save_suffix $save_suffix --epochs $epochs
+python train.py --mode zero_shot --text_model_name $model_name --prompt "{}" --save_suffix $save_suffix --epochs $epochs
+python train.py --mode adapter --text_model_name $model_name --prompt "{}" --save_suffix $save_suffix --epochs $epochs
 
 # 评估
 python evaluate.py --model_path $pretrain --text_model_name $model_name --save_path $save_path
