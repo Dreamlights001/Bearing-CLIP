@@ -232,7 +232,7 @@ Code snippet
   year         \= {2025},  
   publisher    \= {GitHub},  
   journal      \= {GitHub repository},  
-  howpublished \= {\\url{https://github.com/Dreamlights001/Bearing-BERT}}  
+  howpublished \= {\\url{https://github.com/Dreamlights001/Bearing-CLIP}}  
 }
 ```
 ## **许可证**
