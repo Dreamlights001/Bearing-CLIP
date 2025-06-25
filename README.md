@@ -214,6 +214,7 @@ python evaluate.py --model_path $pretrain --text_model_name $model_name --save_p
 <p align="center">
   <img src="https://latex.codecogs.com/png.latex?%5Ctext%7Blogits%7D%20%3D%20%5Cexp%28%5Ctau%29%20%5Ccdot%20%28%5Ctext%7Bnormalize%7D%28V%29%20%5Ccdot%20%5Ctext%7Bnormalize%7D%28T%29%5ET%29" alt="Similarity Calculation">
 </p>
+
 - **关键公式 - 对称对比损失**:
 <p align="center">
   <img src="https://latex.codecogs.com/png.latex?L_%7B%5Ctext%7Btotal%7D%7D%20%3D%20%5Cfrac%7B2%20%5Ccdot%20%5Ctext%7BCrossEntropy%7D%28L%2C%20%5Ctext%7Blabels%7D%29%20%2B%20%5Ctext%7BCrossEntropy%7D%28L%5ET%2C%20%5Ctext%7Blabels%7D%29%7D%7B2%7D" alt="Symmetric Contrastive Loss">
