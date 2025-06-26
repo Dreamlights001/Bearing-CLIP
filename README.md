@@ -23,6 +23,8 @@
  
 **这是一个基于CLIP思想的多模态故障诊断模型，其中文本编码部分我们采用了预训练的BERT和Qwen2模型。**
 
+![](github.com/Dreamlights001/Bearing-CLIP/blob/main/images/Bearing-CLIP%E6%B5%81%E7%A8%8B%E5%9B%BE.svg)
+
 ## **✨ 核心功能**
 
 * **CLIP多模态架构**: 创新性地将CLIP思想从视觉-语言领域迁移至工业信号处理，构建“振动-文本”双编码器模型。  
