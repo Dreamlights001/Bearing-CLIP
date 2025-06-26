@@ -126,7 +126,7 @@ pip install \-r requirements.txt
 
 python train.py \--mode zero\_shot
 ```
-* **产出**: ./pretrained\_weights/zero\_shot\_model.pth
+* **生成**: `./pretrained\_weights/zero\_shot\_model.pth`
 
 ### **阶段二: 适配器微调**
 此阶段加载第一阶段的模型，并仅微调适配器。
@@ -134,7 +134,7 @@ python train.py \--mode zero\_shot
 
 python train.py \--mode adapter \--epochs 15 \--lr 5e-5
 ```
-* **产出**: ./pretrained\_weights/adapter\_tuned\_model.pth
+* **生成**: `./pretrained\_weights/adapter\_tuned\_model.pth`
 
 ### **阶段三: 评估最终模型**
 评估脚本可以评估任何模型，并通过 `--save_path` 指定结果输出目录。
@@ -142,7 +142,7 @@ python train.py \--mode adapter \--epochs 15 \--lr 5e-5
 
 python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model.pth \--save\_path ./results/final\_model\_report
 ```
-* **产出**: 在 ./results/final\_model\_report 文件夹下生成完整的性能报告和图表。
+* **生成**: 在 `./results/final\_model\_report` 文件夹下生成完整的性能报告和图表。
 
 ## **🔬 高级用法: 进行消融实验**
 本框架的核心优势在于其便捷的消融实验流程。
@@ -158,7 +158,7 @@ python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model.pt
   # 评估有适配器模型  
   python evaluate.py \--model\_path ./pretrained\_weights/adapter\_tuned\_model.pth \--save\_path ./results/with\_adapter
 
-* **分析**: 对比两个results文件夹中 `results/_no_adapter` 和 `results/_with_adapter` 的性能指标。
+* **分析**: 对比两个`results`文件夹中 `results/_no_adapter` 和 `results/_with_adapter` 的性能指标。
 
 ### **实验2: 文本编码器先进性对比 (DistilBERT vs. Qwen2)**
 
