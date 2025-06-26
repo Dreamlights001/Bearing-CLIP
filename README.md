@@ -23,7 +23,7 @@
  
 **这是一个基于CLIP思想的多模态故障诊断模型，其中文本编码部分我们采用了预训练的BERT和Qwen2模型。**
 
-![](github.com/Dreamlights001/Bearing-CLIP/blob/main/images/Bearing-CLIP%E6%B5%81%E7%A8%8B%E5%9B%BE.svg)
+![](github.com/Dreamlights001/Bearing-CLIP/blob/main/images/Bearing-CLIP流程图.png)
 
 ## **✨ 核心功能**
 
