@@ -240,3 +240,12 @@ Code snippet
 ## **许可证**
 
 本项目采用 [MIT License](https://www.google.com/search?q=LICENSE) 许可证。
+
+## **贡献**
+
+**王宇琛 吉林大学 机械与航空航天工程学院**
+**张植萱 吉林大学 计算机科学与技术学院**
+
+## **启发**
+
+**AnoVL(https://github.com/hq-deng/AnoVL)**
