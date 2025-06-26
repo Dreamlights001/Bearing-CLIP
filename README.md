@@ -248,4 +248,4 @@ Code snippet
 
 ## **启发**
 
-**[AnoVL(CVPR2023)](https://github.com/hq-deng/AnoVL)**
+本方法受到**[AnoVL(CVPR2023)](https://github.com/hq-deng/AnoVL)**的启发
