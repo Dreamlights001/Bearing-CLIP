@@ -105,7 +105,7 @@ pip install \-r requirements.txt
 
 * 方法B: 手动下载模型  
 
-  使用git将模型克隆到本地（例如，git clone https://hf-mirror.com/Qwen/Qwen2-1.5B-Base），然后在运行时将--text\_model\_name参数指向本地文件夹路径。
+  使用git将模型克隆到本地（例如，`git clone https://hf-mirror.com/Qwen/Qwen2-1.5B-Base`），然后在运行时将--text\_model\_name参数指向本地文件夹路径。
 <p>
 
 * 方法C(推荐使用学术加速): 程序自动集成  
