@@ -54,14 +54,12 @@
 ├── results/                    \# 存放评估结果的文件夹  
 │   ├── distilbert\_simple\_no\_adapter/  
 │   └── ... (其他实验结果)  
-├── workflow/                   \# 存放由脚本生成的流程图  
-│   ├── 1\_main\_workflow\_mpl.png  
+├── images/                   \# 存放由脚本生成的流程图  
+│   ├── _workflow.png  
 │   └── ...  
-├── data\_loader.py              \# 数据加载模块  
 ├── model.py                    \# 模型定义模块 (支持加载不同Hugging Face模型)  
 ├── train.py                    \# 训练脚本 (支持多变量消融实验)  
 ├── evaluate.py                 \# 评估脚本 (支持多变量消融实验)  
-├── make\_diagrams\_matplotlib.py \# (可选) 流程图生成脚本  
 ├── requirements.txt            \# Python依赖库  
 └── README.md                   \# 本文档
 ```
